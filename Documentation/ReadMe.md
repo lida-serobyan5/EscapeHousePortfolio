@@ -15,6 +15,7 @@ Escape House is a 3D puzzle and logic-based escape game built with Unity using t
 - MySQL + PHP (for saving progress)
 - JSON serialization
 - Unity Animator and Audio systems
+- UModeler-X
 
 ##  Media
 Videos and screenshots are located in the [Demo](../Demo) folder.
@@ -32,27 +33,17 @@ This project was fully developed by me, including:
 # Escape House - Game Structure
 
 ## Scene Layout
-- **Main Menu**: Player Login, Options, Start Game
-- **EscapeHouse**: Main gameplay with puzzles and logic
+- **Main Menu**: Player SignUp/SignIn, MainMenu - Play, Options Menu, Help, Exit Game 
+- **EscapeHouse**: Main gameplay 
 
 ## Key Systems
-- **GameManager**: Central controller for loading, saving, and player data.
+- **GameManager**: Central controller for loading and saving.
 - **ProgressManager**: Handles player progress and save/load system.
 - **OptionsMenu**: Volume, fullscreen, quality settings.
 - **Puzzle Logic**: Each puzzle has its own logic script and interaction trigger.
-
-## Object Hierarchy Example
-- Safe → RotatePoint → SafeDoor & SafeKeypad
-- Door → RotatePoint → DoorObject & Keypad
 
 ## Save System
 - JSON file sent to a remote MySQL database using PHP
 - Saves player position, solved puzzles, opened doors, etc.
 
-# How to Play
 
-- Use 'WASD' to move, 'Mouse' to look around.
-- Click on objects to interact.
-- Collect cards or clues and place them in correct locations.
-- Solve puzzles using logic, memory, and deduction.
-- Your progress will auto-save as you play.
